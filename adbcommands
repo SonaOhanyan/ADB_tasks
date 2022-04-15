@@ -1,0 +1,19 @@
+#Download the .zip   https://dl.google.com/android/repository/platform-tools-latest-linux.zip
+#Open the Terminal and enter the command $sudo apt-get install android-tools-adb
+#Open the Android device and follow these steps 
+1. Go to the Settings
+2. Tap About Phone
+3. Press the Build Number 7 times
+4.Enter the PIN code
+5.The Developer options menu will appear in Settings menu
+6.Enter the Developer Options section
+7.Enable USB Debugging 
+#Connect your device to a Linux computer using USB cable
+#A request will appear on the smartphone asking you to allow USB debugging. Grant it.
+#Enter the command in the Terminal    $adb devices 
+#Make a device screen using           $adb shell screencap -p /sdcard/screen.png 
+#Get a photo                          $adb pull /sdcard/screen.png 
+#Record the device screen with        $adb shell screenrecord /sdcard/demo.mp4 AND stop it with ^C
+                           OR         $adb shell screenrecord --time-limit=120 /mnt/sdcard/demo.mp4
+#Get the video                        $adb pull /sdcard/demo.mp4
+#Do logcat                            $adb logcat
